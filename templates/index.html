@@ -52,5 +52,50 @@
 </div>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<div class="panel algorithm-explain">
+    <h3>Algorithm Explanation</h3>
+
+    <div class="algo-box">
+        <h4>BFS (Breadth-First Search)</h4>
+        <p>
+            Explores all neighboring nodes level by level.
+            Always finds the shortest path but may explore many nodes.
+        </p>
+    </div>
+
+    <div class="algo-box">
+        <h4>DFS (Depth-First Search)</h4>
+        <p>
+            Explores as deep as possible along one path before backtracking.
+            Fast but does not guarantee the shortest path.
+        </p>
+    </div>
+
+    <div class="algo-box">
+        <h4>IDDFS (Iterative Deepening DFS)</h4>
+        <p>
+            Combines DFS and BFS by gradually increasing depth limits.
+            Memory efficient and guarantees optimal solutions.
+        </p>
+    </div>
+
+    <div class="algo-box">
+        <h4>A* Search</h4>
+        <p>
+            Uses cost + heuristic estimation to guide the search.
+            Efficient and usually finds the optimal path quickly.
+        </p>
+    </div>
+</div>
+
+    <footer class="footer">
+    <p>
+        © 2025 AI Pathfinding Visualizer |
+        Built by <strong>Mujahidul Islam</strong> |
+        AI Lab Project
+    </p>
+</footer>
+
 </body>
 </html>
