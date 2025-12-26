@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Pathfinding Visualizer</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1> AI Pathfinding Visualizer </h1>
+        <p>Compare BFS, DFS, IDDFS, and A* visually</p>
+    </div>
+
+    <div class="controls-grid">
+        <div class="panel">
+            <h3>Algorithm</h3>
+            <select id="algorithmSelect">
+                <option value="astar">A* Search (Best)</option>
+                <option value="bfs">Breadth-First Search</option>
+                <option value="dfs">Depth-First Search</option>
+                <option value="iddfs">Iterative Deepening DFS</option>
+            </select>
+            <button class="btn btn-primary" onclick="runAlgorithm()"> Run Algorithm</button>
+            <button class="btn btn-secondary" onclick="resetGrid()"> Reset Grid</button>
+            <button class="btn btn-secondary" onclick="generateMaze()"> New Maze</button>
+        </div>
+
+        <div class="panel">
+            <h3>Statistics</h3>
+            <div class="stats-item"><span>Nodes Explored:</span><span class="stats-value" id="nodesExplored">0</span></div>
+            <div class="stats-item"><span>Path Length:</span><span class="stats-value" id="pathLength">0</span></div>
+            <div class="stats-item"><span>Time:</span><span class="stats-value" id="time">0ms</span></div>
+        </div>
+
+        <div class="panel">
+            <h3>Legend</h3>
+            <div class="legend-item"><div class="legend-color" style="background:#10b981;"></div><span> Start</span></div>
+            <div class="legend-item"><div class="legend-color" style="background:#ef4444;"></div><span>Goal</span></div>
+            <div class="legend-item"><div class="legend-color" style="background:#1e3a8a;"></div><span>Wall</span></div>
+            <div class="legend-item"><div class="legend-color" style="background:#93c5fd;"></div><span>Visited</span></div>
+            <div class="legend-item"><div class="legend-color" style="background:#fde68a;"></div><span>Final Path</span></div>
+        </div>
+    </div>
+
+    <div style="text-align:center;">
+        <div class="grid-container">
+            <div id="grid" class="grid"></div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

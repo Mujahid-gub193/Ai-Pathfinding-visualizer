@@ -1,0 +1,48 @@
+/* Reset and body */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f8faff; min-height:100vh; padding:20px; }
+
+/* Container & header */
+.container { max-width:1400px; margin:0 auto; }
+.header { text-align:center; margin-bottom:30px; }
+.header h1 { font-size:2.5em; color:#1e3a8a; margin-bottom:10px; }
+.header p { color:#3b82f6; font-size:1.1em; }
+
+/* Controls grid */
+.controls-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-bottom:30px; }
+.panel { background:white; padding:25px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
+.panel h3 { margin-bottom:15px; color:#1e3a8a; font-size:1.3em; }
+
+/* Buttons */
+.btn { width:100%; padding:12px; margin:8px 0; border:none; border-radius:8px; font-size:16px; cursor:pointer; transition:all 0.3s; font-weight:600; }
+.btn-primary { background:#3b82f6; color:white; }
+.btn-primary:hover { background:#2563eb; transform:translateY(-2px);}
+.btn-secondary { background:#60a5fa; color:white; }
+.btn-secondary:hover { background:#2563eb; }
+
+/* Dropdowns */
+select { width:100%; padding:12px; margin:10px 0; border:2px solid #ddd; border-radius:8px; font-size:16px; }
+
+/* Stats panel */
+.stats-item { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #eee; }
+.stats-value { font-weight:bold; color:#3b82f6; }
+
+/* Legend */
+.legend-item { display:flex; align-items:center; margin:10px 0; }
+.legend-color { width:30px; height:30px; border:2px solid #333; margin-right:10px; border-radius:4px; }
+
+/* Grid container */
+.grid-container { background:white; padding:20px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.1); display:inline-block; overflow:auto; max-width:100%; }
+.grid { display:inline-grid; gap:1px; background:#ddd; border:2px solid #2563eb; }
+
+/* Cells */
+.cell { width:30px; height:30px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center; font-size:18px; transition:all 0.2s; }
+.cell-empty { background:white; }
+.cell-wall { background:#1e3a8a; }
+.cell-start { background:#10b981; color:white; }
+.cell-goal { background:#ef4444; color:white; }
+.cell-visited { background:#93c5fd; }
+.cell-path { background:#fde68a; }
+
+/* Responsive */
+@media(max-width:768px){ .cell{ width:20px; height:20px; font-size:14px; } }
